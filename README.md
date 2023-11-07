@@ -7,6 +7,7 @@
 
 2. 이벤트스토밍 모델
 (*이미지첨부)
+![image](https://github.com/devArare/stmall-choa/assets/135335032/892b5f91-9180-41bb-ae5d-ebdfe87c8098)
 
 
 # 
