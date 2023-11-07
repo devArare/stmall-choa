@@ -57,22 +57,6 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='DeliveryCanceled'"
-    )
-    public void wheneverDeliveryCanceled_UpdateStatus(
-        @Payload DeliveryCanceled deliveryCanceled
-    ) {
-        DeliveryCanceled event = deliveryCanceled;
-        System.out.println(
-            "\n\n##### listener UpdateStatus : " + deliveryCanceled + "\n\n"
-        );
-
-        // Sample Logic //
-        Order.updateStatus(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='StockIncreased'"
     )
     public void wheneverStockIncreased_NotifyToWaitingCustomer(
